@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  XYZ
+//
+//  Created by TsCwLife on 16/5/6.
+//  Copyright © 2016年 CwLife. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define XYScreenW ([UIScreen mainScreen].bounds.size.width)
+#define XYScreenH ([[UIScreen mainScreen] bounds].size.height)
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
