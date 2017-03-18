@@ -10,6 +10,7 @@
 #import "OneViewController.h"
 #import "TwoViewController.h"
 #import "ThreeViewController.h"
+#import "FourViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -32,7 +33,7 @@
     _dataArray = @[@"1. UISearchBar",
                    @"2. 当前页展示结果",
                    @"3. 跳转页展示结果",
-                   @"4. ",
+                   @"4. searchBar在导航栏上",
                    @"5. ",
                    @"6. ",
                    @"7. "];
@@ -93,6 +94,13 @@
         {
             ThreeViewController *vc = [ThreeViewController new];
             vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            FourViewController *vc = [FourViewController new];
+           // vc.title = title;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		143679BB1E7AD96E006AE410 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143679BA1E7AD96E006AE410 /* ThreeViewController.m */; };
+		1454D2291E7CF41F00595CAD /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1454D2281E7CF41F00595CAD /* FourViewController.m */; };
 		BB26CBAF1CE08658001B6CA3 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26CBAD1CE08658001B6CA3 /* OneViewController.m */; };
 		BB26CBB01CE08658001B6CA3 /* OneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB26CBAE1CE08658001B6CA3 /* OneViewController.xib */; };
 		BB26CBB41CE08668001B6CA3 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26CBB21CE08668001B6CA3 /* TwoViewController.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		143679B91E7AD96E006AE410 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
 		143679BA1E7AD96E006AE410 /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		1454D2271E7CF41F00595CAD /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		1454D2281E7CF41F00595CAD /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		BB26CBAC1CE08658001B6CA3 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		BB26CBAD1CE08658001B6CA3 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		BB26CBAE1CE08658001B6CA3 /* OneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneViewController.xib; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				143679BA1E7AD96E006AE410 /* ThreeViewController.m */,
 				BBDCA6F61D9BCBC700355782 /* ResultVC.h */,
 				BBDCA6F71D9BCBC700355782 /* ResultVC.m */,
+				1454D2271E7CF41F00595CAD /* FourViewController.h */,
+				1454D2281E7CF41F00595CAD /* FourViewController.m */,
 				BB26CBB31CE08668001B6CA3 /* TwoViewController.xib */,
 				BBAB813D1CDC760300CB9EFB /* Assets.xcassets */,
 				BBAB813F1CDC760300CB9EFB /* LaunchScreen.storyboard */,
@@ -302,6 +307,7 @@
 			files = (
 				BBAB81391CDC760300CB9EFB /* ViewController.m in Sources */,
 				143679BB1E7AD96E006AE410 /* ThreeViewController.m in Sources */,
+				1454D2291E7CF41F00595CAD /* FourViewController.m in Sources */,
 				BBAB81361CDC760300CB9EFB /* AppDelegate.m in Sources */,
 				BBAB81331CDC760300CB9EFB /* main.m in Sources */,
 				BB26CBB41CE08668001B6CA3 /* TwoViewController.m in Sources */,

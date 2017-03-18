@@ -1,20 +1,19 @@
 //
-//  ThreeViewController.m
+//  FourViewController.m
 //  XYZ
 //
-//  Created by ChoyAlfred on 2017/3/16.
+//  Created by ChoyAlfred on 2017/3/18.
 //  Copyright © 2017年 CwLife. All rights reserved.
 //
 
-#import "ThreeViewController.h"
+#import "FourViewController.h"
 #import "ResultVC.h"
 
 
 static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
 
 
-
-@interface ThreeViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,UISearchControllerDelegate,UISearchBarDelegate>
+@interface FourViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating,UISearchControllerDelegate,UISearchBarDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (strong,nonatomic) NSMutableArray  *dataSource;  //原始数据
@@ -23,10 +22,10 @@ static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
 @property (strong,nonatomic) NSMutableArray  *searchResults;  //搜索结果
 @property (strong,nonatomic) ResultVC *resultVC; //搜索结果展示控制器
 
+
 @end
 
-@implementation ThreeViewController
-
+@implementation FourViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,11 +45,10 @@ static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
     _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultVC];
     _searchController.searchResultsUpdater = self;
     _searchController.delegate = self;
-    //_searchController.dimsBackgroundDuringPresentation = NO;
-    _searchController.hidesNavigationBarDuringPresentation = YES;//搜索时隐藏导航栏  默认的是YES
+    _searchController.dimsBackgroundDuringPresentation = NO; //默认是YES
     
     _searchController.searchBar.placeholder = @"placeholder";
-    _searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    _searchController.searchBar.searchBarStyle = UISearchBarStyleDefault;
     //_searchController.searchBar.prompt = @"prompt"; //提示语
     _searchController.searchBar.showsCancelButton = YES;
     _searchController.searchBar.showsBookmarkButton = YES;
@@ -60,11 +58,20 @@ static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
     //_searchController.searchBar.showsScopeBar = YES;
     //_searchController.searchBar.scopeButtonTitles = @[@"BookmarkButton" ,@"ScopeButton",@"ResultsListButton",@"CancelButton",@"SearchButton"];
     _searchController.searchBar.delegate = self;
-    _searchController.searchBar.frame = CGRectMake(0, 0, XYScreenW,60);
-    self.tableView.tableHeaderView = _searchController.searchBar;
+    _searchController.searchBar.frame = CGRectMake(60, 0, XYScreenW-160,44);
+    //self.tableView.tableHeaderView = _searchController.searchBar;
+    
+    //添加到导航栏上
+    [self.navigationController.navigationBar addSubview:_searchController.searchBar];
+     _searchController.hidesNavigationBarDuringPresentation = NO;//搜索时隐藏导航栏 默认是YES
     
     //解决：退出时搜索框依然存在的问题
     self.definesPresentationContext = YES;
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [_searchController.searchBar removeFromSuperview];
 }
 
 
@@ -117,7 +124,7 @@ static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
 // 根据输入的关键词及时响应：里面可以实现筛选逻辑  也显示可以联想词
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSLog(@"%s",__func__);
-
+    
     //获取搜索框里地字符串
     NSString *searchString = searchController.searchBar.text;
     
@@ -255,10 +262,6 @@ static NSString *const kUITableViewCellIdentifier = @"cellIdentifier";
     }
     return _searchResults;
 }
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

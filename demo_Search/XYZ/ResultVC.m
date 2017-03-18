@@ -44,6 +44,7 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flag];
     }
     [cell.textLabel setText:self.results[indexPath.row]];
+    cell.backgroundColor = [UIColor cyanColor];
     return cell;
 }
 
